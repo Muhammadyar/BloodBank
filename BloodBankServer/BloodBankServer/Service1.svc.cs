@@ -32,8 +32,8 @@ namespace BloodBankServer
         {
             donor a = new donor();
             a.Name =  user;
-            a.Password = pas;
-            a.Bloodgroup = BG;
+            a.Password =  pas;
+            a.Bloodgroup =  BG;
             a.Address = address;
             a.ContactNumber = contact;
             a.Age = age;
@@ -48,14 +48,14 @@ namespace BloodBankServer
             {
                 if (r.Name == name && r.Password == paswrd && r.Age == age)
                 {
-                     yes = true;
+                    yes = true;
                 }
             }
             return yes;
         }
 
         public List<donor> showDonor()
-        
+        {
             return donorDL.shortlist;
         }
 
