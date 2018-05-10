@@ -16,6 +16,52 @@ namespace BloodBankServer
         {
             return string.Format("You entered: {0}", value);
         }
+        public void regesterUser(string user, string pas, string BG, string address, int contact)
+        {
+            AcceptorClass a = new AcceptorClass();
+            a.Username1 = user;
+            a.Password = pas;
+            a.Bloodgroup = BG;
+            a.Address = address;
+            a.Contact = contact;
+
+            AcceptorDL.acptrList.Add(a);
+        }
+        public List<AcceptorClass> showAll()
+        {
+            return AcceptorDL.acptrList;
+        }
+
+        public void regesterDonor(string user, string pas, string BG, string address, int contact, Image img, int age, DateTime m)
+        {
+            DonorClass a = new DonorClass();
+            a.Username1 = user;
+            a.Password = pas;
+            a.Bloodgroup = BG;
+            a.Address = address;
+            a.Contact = contact;
+            a.Age = age;
+            a.T = m;
+            a.Img = img;
+            DonorDL.donoList.Add(a);
+        }
+        public bool loginDonor(string name, int age, string paswrd)
+        {
+            bool yes = false;
+            foreach (DonorClass r in DonorDL.donoList)
+            {
+                if (r.Username1 == name && r.Password == paswrd && r.Age == age)
+                {
+                    yes = true;
+                }
+            }
+            return yes;
+        }
+
+        public List<DonorClass> showDonor()
+        {
+            return DonorDL.donoList;
+        }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {

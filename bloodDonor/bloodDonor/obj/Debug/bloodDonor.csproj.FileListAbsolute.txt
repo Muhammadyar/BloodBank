@@ -1,1 +1,2 @@
 c:\users\sunny sahil\documents\visual studio 2015\Projects\bloodDonor\bloodDonor\bin\Debug\bloodDonor.exe.config
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\bin\Debug\bloodDonor.exe.config
