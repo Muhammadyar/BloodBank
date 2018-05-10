@@ -16,5 +16,10 @@ namespace bloodDonor
         {
             InitializeComponent();
         }
+
+        private void donorRegistrationForm_Load(object sender, EventArgs e)
+        {
+             
+        }
     }
 }

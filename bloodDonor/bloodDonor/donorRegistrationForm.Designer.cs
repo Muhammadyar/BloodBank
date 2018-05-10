@@ -168,6 +168,7 @@
             this.Controls.Add(this.donorNameTextBox);
             this.Name = "donorRegistrationForm";
             this.Text = "donorRegistrationForm";
+            this.Load += new System.EventHandler(this.donorRegistrationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
