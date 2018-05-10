@@ -1,2 +1,11 @@
 c:\users\sunny sahil\documents\visual studio 2015\Projects\bloodDonor\bloodDonor\bin\Debug\bloodDonor.exe.config
 E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\bin\Debug\bloodDonor.exe.config
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\bin\Debug\bloodDonor.exe
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\bin\Debug\bloodDonor.pdb
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.csprojResolveAssemblyReference.cache
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.donorRegistrationForm.resources
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.Form1.resources
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.Properties.Resources.resources
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.csproj.GenerateResource.Cache
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.exe
+E:\Blood Bank\BloodBank\bloodDonor\bloodDonor\obj\Debug\bloodDonor.pdb

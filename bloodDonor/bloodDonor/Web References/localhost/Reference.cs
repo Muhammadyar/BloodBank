@@ -35,6 +35,10 @@ namespace bloodDonor.localhost {
         
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
+        private System.Threading.SendOrPostCallback showDonorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback regesterDonorOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -81,6 +85,12 @@ namespace bloodDonor.localhost {
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
+        
+        /// <remarks/>
+        public event showDonorCompletedEventHandler showDonorCompleted;
+        
+        /// <remarks/>
+        public event regesterDonorCompletedEventHandler regesterDonorCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/add_blood", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -171,6 +181,81 @@ namespace bloodDonor.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/showDonor", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/BloodBankServer")]
+        public donor[] showDonor() {
+            object[] results = this.Invoke("showDonor", new object[0]);
+            return ((donor[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void showDonorAsync() {
+            this.showDonorAsync(null);
+        }
+        
+        /// <remarks/>
+        public void showDonorAsync(object userState) {
+            if ((this.showDonorOperationCompleted == null)) {
+                this.showDonorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnshowDonorOperationCompleted);
+            }
+            this.InvokeAsync("showDonor", new object[0], this.showDonorOperationCompleted, userState);
+        }
+        
+        private void OnshowDonorOperationCompleted(object arg) {
+            if ((this.showDonorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.showDonorCompleted(this, new showDonorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/regesterDonor", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void regesterDonor([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string user, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pas, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string BG, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string address, int contact, [System.Xml.Serialization.XmlIgnoreAttribute()] bool contactSpecified, int age, [System.Xml.Serialization.XmlIgnoreAttribute()] bool ageSpecified, System.DateTime m, [System.Xml.Serialization.XmlIgnoreAttribute()] bool mSpecified) {
+            this.Invoke("regesterDonor", new object[] {
+                        user,
+                        pas,
+                        BG,
+                        address,
+                        contact,
+                        contactSpecified,
+                        age,
+                        ageSpecified,
+                        m,
+                        mSpecified});
+        }
+        
+        /// <remarks/>
+        public void regesterDonorAsync(string user, string pas, string BG, string address, int contact, bool contactSpecified, int age, bool ageSpecified, System.DateTime m, bool mSpecified) {
+            this.regesterDonorAsync(user, pas, BG, address, contact, contactSpecified, age, ageSpecified, m, mSpecified, null);
+        }
+        
+        /// <remarks/>
+        public void regesterDonorAsync(string user, string pas, string BG, string address, int contact, bool contactSpecified, int age, bool ageSpecified, System.DateTime m, bool mSpecified, object userState) {
+            if ((this.regesterDonorOperationCompleted == null)) {
+                this.regesterDonorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnregesterDonorOperationCompleted);
+            }
+            this.InvokeAsync("regesterDonor", new object[] {
+                        user,
+                        pas,
+                        BG,
+                        address,
+                        contact,
+                        contactSpecified,
+                        age,
+                        ageSpecified,
+                        m,
+                        mSpecified}, this.regesterDonorOperationCompleted, userState);
+        }
+        
+        private void OnregesterDonorOperationCompleted(object arg) {
+            if ((this.regesterDonorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.regesterDonorCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -237,6 +322,130 @@ namespace bloodDonor.localhost {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/BloodBankServer")]
+    public partial class donor {
+        
+        private string addressField;
+        
+        private int ageField;
+        
+        private bool ageFieldSpecified;
+        
+        private string bloodgroupField;
+        
+        private int contactNumberField;
+        
+        private bool contactNumberFieldSpecified;
+        
+        private string imageField;
+        
+        private string nameField;
+        
+        private string passwordField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Age {
+            get {
+                return this.ageField;
+            }
+            set {
+                this.ageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AgeSpecified {
+            get {
+                return this.ageFieldSpecified;
+            }
+            set {
+                this.ageFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Bloodgroup {
+            get {
+                return this.bloodgroupField;
+            }
+            set {
+                this.bloodgroupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int ContactNumber {
+            get {
+                return this.contactNumberField;
+            }
+            set {
+                this.contactNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ContactNumberSpecified {
+            get {
+                return this.contactNumberFieldSpecified;
+            }
+            set {
+                this.contactNumberFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Image {
+            get {
+                return this.imageField;
+            }
+            set {
+                this.imageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void add_bloodCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
@@ -291,6 +500,36 @@ namespace bloodDonor.localhost {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void showDonorCompletedEventHandler(object sender, showDonorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class showDonorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal showDonorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public donor[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((donor[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void regesterDonorCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

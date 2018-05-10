@@ -19,7 +19,9 @@ namespace bloodDonor
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            donorRegistrationForm d = new donorRegistrationForm();
+            d.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +31,11 @@ namespace bloodDonor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            localhost.Service1  s= new localhost.Service1();
+            
+            BindingSource b = new BindingSource();
+            b.DataSource = s.showDonor();
+            dataGridView1.DataSource = b; 
         }
     }
 }

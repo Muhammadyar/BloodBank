@@ -7,4 +7,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="ArrayOfdonor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="donor" nillable="true" type="tns:donor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdonor" nillable="true" type="tns:ArrayOfdonor" />
+  <xs:complexType name="donor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="Bloodgroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="donor" nillable="true" type="tns:donor" />
 </xs:schema>

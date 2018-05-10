@@ -39,4 +39,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="showDonor">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showDonorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BloodBankServer" minOccurs="0" name="showDonorResult" nillable="true" type="q3:ArrayOfdonor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="regesterDonor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pas" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contact" type="xs:int" />
+        <xs:element minOccurs="0" name="age" type="xs:int" />
+        <xs:element minOccurs="0" name="m" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="regesterDonorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
