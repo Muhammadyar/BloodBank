@@ -44,7 +44,7 @@ namespace BloodBankServer
         public bool loginDonor(string name, int age, string paswrd)
         {
             bool yes = false;
-            foreach (donor r in donorDL.shortlist)
+            foreach (donor r  in donorDL.shortlist)
             {
                 if (r.Name == name && r.Password == paswrd && r.Age == age)
                 {
