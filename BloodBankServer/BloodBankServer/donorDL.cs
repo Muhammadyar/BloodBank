@@ -8,22 +8,23 @@ namespace BloodBankServer
     public class donorDL
     {
         public static List<donor> shortlist = new List<donor>();
-        public List<DonorClass> searchName(string name)
+        public List<donor> searchName(string name)
         {
-            List<DonorClass> l = new List<DonorClass>();
-            foreach (DonorClass h in donoList)
+            List<donor> l = new List<donor>();
+            foreach (donor h in donorDL.shortlist)
             {
-                if (h.Username1 == name)
+                if (h.Name == name)
                 {
+
                     l.Add(h);
                 }
             }
             return l;
         }
-        public List<DonorClass> searchBG(string bg)
+        public List<donor> searchBG(string bg)
         {
-            List<DonorClass> l = new List<DonorClass>();
-            foreach (DonorClass h in donoList)
+            List<donor> l = new List<donor>();
+            foreach (donor h in donorDL.shortlist)
             {
                 if (h.Bloodgroup == bg)
                 {

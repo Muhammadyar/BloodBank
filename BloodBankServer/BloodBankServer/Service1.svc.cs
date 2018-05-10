@@ -18,39 +18,35 @@ namespace BloodBankServer
         }
         public void regesterUser(string user, string pas, string BG, string address, int contact)
         {
-            AcceptorClass a = new AcceptorClass();
-            a.Username1 = user;
+           // acceptor a = new acceptor();
+           // a.Username1 = user;
+           // a.Password = pas;
+            //a.Bloodgroup = BG;
+            //a.Address = address;
+            //a.Contact = contact;
+
+            //AcceptorDL.acptrList.Add(a);
+        }
+        
+        public void regesterDonor(string user, string pas, string BG, string address, int contact, int age, DateTime m)
+        {
+            donor a = new donor();
+            a.Name = user;
             a.Password = pas;
             a.Bloodgroup = BG;
             a.Address = address;
-            a.Contact = contact;
-
-            AcceptorDL.acptrList.Add(a);
-        }
-        public List<AcceptorClass> showAll()
-        {
-            return AcceptorDL.acptrList;
-        }
-
-        public void regesterDonor(string user, string pas, string BG, string address, int contact, Image img, int age, DateTime m)
-        {
-            DonorClass a = new DonorClass();
-            a.Username1 = user;
-            a.Password = pas;
-            a.Bloodgroup = BG;
-            a.Address = address;
-            a.Contact = contact;
+            a.ContactNumber = contact;
             a.Age = age;
-            a.T = m;
-            a.Img = img;
-            DonorDL.donoList.Add(a);
+            //a.T = m;
+            //a.Image = img;
+            donorDL.shortlist.Add(a);
         }
         public bool loginDonor(string name, int age, string paswrd)
         {
             bool yes = false;
-            foreach (DonorClass r in DonorDL.donoList)
+            foreach (donor r in donorDL.shortlist)
             {
-                if (r.Username1 == name && r.Password == paswrd && r.Age == age)
+                if (r.Name == name && r.Password == paswrd && r.Age == age)
                 {
                     yes = true;
                 }
@@ -58,9 +54,9 @@ namespace BloodBankServer
             return yes;
         }
 
-        public List<DonorClass> showDonor()
+        public List<donor> showDonor()
         {
-            return DonorDL.donoList;
+            return donorDL.shortlist;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
@@ -74,6 +70,11 @@ namespace BloodBankServer
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+        public void add_blood()
+        {
+            throw new NotImplementedException();
         }
     }
 }

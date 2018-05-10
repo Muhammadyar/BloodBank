@@ -1,1 +1,7 @@
 C:\Users\Sunny Sahil\Documents\Visual Studio 2015\Projects\BloodBankServer\BloodBankServer\obj\Debug\BloodBankServer.csprojResolveAssemblyReference.cache
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\obj\Debug\BloodBankServer.csprojResolveAssemblyReference.cache
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\bin\BloodBankServer.dll.config
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\bin\BloodBankServer.dll
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\bin\BloodBankServer.pdb
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\obj\Debug\BloodBankServer.dll
+E:\Blood Bank\BloodBank\BloodBankServer\BloodBankServer\obj\Debug\BloodBankServer.pdb

@@ -13,7 +13,7 @@ namespace BloodBankServer
     public interface IService1
     {
         [OperationContract]
-        void add_blood()
+        void add_blood();
 
         [OperationContract]
         string GetData(int value);
