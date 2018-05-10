@@ -32,8 +32,8 @@ namespace BloodBankServer
         {
             donor a = new donor();
             a.Name =  user;
-            a.Password = pas;
-            a.Bloodgroup = BG;
+            a.Password =  pas;
+            a.Bloodgroup =  BG;
             a.Address = address;
             a.ContactNumber = contact;
             a.Age = age;
@@ -46,22 +46,22 @@ namespace BloodBankServer
             bool yes = false;
             foreach (donor r  in donorDL.shortlist)
             {
-                if (r.Name == name && r.Password == paswrd && r.Age == age)
+               if (r.Name == name && r.Password  == paswrd && r.Age == age)
                 {
-                     yes = true;
+                    yes =  true;
                 }
             }
             return yes;
         }
 
         public List<donor> showDonor()
-        
+        {
             return donorDL.shortlist;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
-            if (composite ==  null)
+            if (composite == null)
             {
                 throw new ArgumentNullException("composite");
             }
