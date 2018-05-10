@@ -7,5 +7,7 @@ namespace BloodBankServer
 {
     public class acceptor
     {
-    }
+
+    } 
+
 }
