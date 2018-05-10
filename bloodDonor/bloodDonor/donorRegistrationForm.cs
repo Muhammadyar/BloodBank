@@ -19,7 +19,7 @@ namespace bloodDonor
 
         private void donorRegistrationForm_Load(object sender, EventArgs e)
         {
-             
+              
         }
     }
 }
