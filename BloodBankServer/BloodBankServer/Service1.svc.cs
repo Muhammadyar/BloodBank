@@ -31,7 +31,7 @@ namespace BloodBankServer
         public void regesterDonor(string user, string pas, string BG, string address, int contact, int age, DateTime m)
         {
             donor a = new donor();
-            a.Name = user;
+            a.Name =  user;
             a.Password = pas;
             a.Bloodgroup = BG;
             a.Address = address;
