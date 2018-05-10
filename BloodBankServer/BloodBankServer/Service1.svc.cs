@@ -48,14 +48,14 @@ namespace BloodBankServer
             {
                 if (r.Name == name && r.Password == paswrd && r.Age == age)
                 {
-                    yes = true;
+                     yes = true;
                 }
             }
             return yes;
         }
 
         public List<donor> showDonor()
-        {
+        
             return donorDL.shortlist;
         }
 
