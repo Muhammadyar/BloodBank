@@ -46,7 +46,7 @@ namespace BloodBankServer
             bool yes = false;
             foreach (donor r  in donorDL.shortlist)
             {
-                if (r.Name == name && r.Password == paswrd && r.Age == age)
+               if (r.Name == name && r.Password == paswrd && r.Age == age)
                 {
                     yes = true;
                 }
